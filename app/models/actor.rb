@@ -6,12 +6,12 @@ class Actor < ActiveRecord::Base
 
   def full_name
     self.first_name+ " "+ self.last_name
-    binding
+    binding.pry
   end
 
   def list_roles
     #binding.pry
     self.characters.collect{|x| x.name+ " - "+x.show.name}
   end
-  
+
 end
